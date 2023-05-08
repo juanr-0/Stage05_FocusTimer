@@ -1,0 +1,103 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color-white: #ffff;
+
+  --base-color: 240;
+  --icon-primary-color: hsla(var(--base-color), 6%, 21%, 1);
+
+  --bg-icon-blue: hsla(194, 97%, 31%, 1);
+  --bg-icon-gray: hsla(var(--base-color), 9%, 89%, 1);
+
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg-color);
+  text-color: var(--icon-primary-color);
+
+  font-family: 'Roboto', sans-serif;
+
+  display: grid;
+  min-height: 100vh;
+}
+
+main {
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 32.1rem 30.8rem;
+  gap:19.2rem;
+} 
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+
+.play svg path, .stop svg path, .plus svg path, .minus svg path{
+  fill: var(--icon-primary-color);
+}
+
+.timer-icons button svg {
+  width: clamp(2rem, 2rem + 12vw, 4.8rem);
+  height: clamp(2rem, 2rem + 12vw, 4.8rem);
+}
+
+.wrapper-timer {
+  justify-self: center;
+  align-self: center;
+}
+.timer {  
+  font-size: clamp(6.3rem, 6.3rem + 10vh, 12.6rem);
+  margin-bottom: 1.6rem;
+  display: flex;
+}
+
+.timer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.sounds-cards {
+  display: grid;
+  grid-template-columns: 13.8rem 13.8rem;
+  gap:3.2rem;
+
+  justify-self: center;
+  align-self: center;
+}
+
+.sounds-cards button {
+  width: 13.8rem;
+  height: 15.2rem;
+
+  border-radius: 2.4rem;
+}
+
+.sound-off{
+  background-color: var(--bg-icon-gray);
+}
+
+.sound-off svg path {
+  fill: var(--icon-primary-color);
+}
+
+.sound-on {
+  background-color: var(--bg-icon-blue);
+}
+
+.sound-on svg path {
+  fill: var( --bg-color-white);
+}
+
+
+
